@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.caja{
+    border-radius: 6px;
+    margin: 50px auto;
+    width: 80px;
+    height: 40px;
+    background: rgb(34, 193, 195);
+}
+
+.caja:hover{
+    transform: scale(4);
+}
+
+.caja-1 {
+    background-color: aquamarine;
+}
+
+
+
+.caja-2{
+    background-color: blueviolet;
+    transition: all 2s;
+}
+
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.circle1{
+    background-color: aqua;
+    transition: all 1.5s linear;
+}
+
+.circle2{
+    background-color: pink;
+    transition: all 1.5s ease;
+}
+
+.circle3{
+    background-color: blueviolet;
+    transition: all 1.5s ease-in;
+}
+
+.circle4{
+    background-color: cadetblue;
+    transition: all 1.5s ease-out;
+}
+
+.circle5{
+    background-color: brown;
+    transition: all 1.5s ease-in-out;
+}
+
+.container-circle:hover>div{
+    transform: translateX(400px);
+}
+
+.combinado {
+    background-color: blueviolet;
+    width: 75px;
+    height: 75px;
+    margin: 50px auto;
+}
+
+.combinado:hover{
+    transform: rotate(90deg) scale(2) translateY(120px);
+    transition: all 1s;
+}
+
+.animaciones{
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    background-color: yellow;
+}
+
+.animaciones:hover{
+    animation: cambioColor 4s;
+}
+
+@keyframes cambioColor{
+    0%{
+    background-color: violet;
+    }
+    
+    15%{
+        border-radius: 50%;
+    }
+    
+    25%{
+        width:600px;
+    }
+    50%{
+        background-color: turquoise;
+        border: solid 4px black;
+    }
+    100%{
+        background-color: teal;
+    }
+    
+}
+
