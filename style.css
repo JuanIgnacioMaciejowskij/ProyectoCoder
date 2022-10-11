@@ -27,6 +27,11 @@ h1 {
     background-color: #000;
 }
 
+.menú-nav{
+    display: flex;
+    justify-content: center;
+}
+
 .menú-bar a {
     margin-right: 50px;
     color: white;
@@ -56,25 +61,6 @@ p{
     color:rgb(0, 0, 0)
 }
 
-.titulo2 {
-    color: white;
-    padding-bottom: 5px;
-    padding-left: 300px;
-    font-weight: bold;
-    font-size: 23px;
-    margin-top: 3px;
-}
-
-.social-footer {
-    width: 20%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2px;
-    margin-top: 6px;
-    /* border: 1px solid blue; */
-    margin-right: 3px;
-}
-
 h3{
     color:#000;
     font-weight: bold;
@@ -87,6 +73,10 @@ h3{
 .p1{
     font-size: 24px;
     margin-bottom: 2px;
+}
+
+.h3{
+    font-weight: bold;
 }
 
 .encabezado1 {
@@ -121,36 +111,166 @@ h1 {
 
 .section-encabezado {
     background-color: #b0aea7;
-    width: 100%;
+    /* width: 100%; */
 }
-
 
 /* estilos-main */
 
-.contenido-cuerpo {
+.main{
     background-color: #d49c19;
+    font-family: 'Poppins', sans-serif;
 }
 
-.photo1y2 {
+.title{
+    font-weight: bold;
+    color:#000;
+    text-align: center;
+    font-size: 2.8rem;
+    padding: .8em 0 .4em;
+    text-transform: uppercase;
+}
+
+.gallery{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img4"
+    "img5 img5 img6 img7"
+    "img5 img5 img8 img8";
+    gap: 10px;
+}
+
+.gallery__picture{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery__picture::before{
+    content: "Tus grupos favoritos";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scaleY(0);
+    transition: transform .4s;
+    color: #fff;
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
-    padding-top: 10px;
+    font-size: 1.5rem;
 }
 
-.photo1 {
-    margin-right: 20px;
+.gallery__picture:hover::before{
+    transform: scaleY(1);
 }
 
-.photo {
-    display: flex;
-    justify-content: center;
+.gallery__img-IMG1::before{
+    content: "Q'Lokura";
 }
 
-.photo3 {
-    width: 700px;
-    height: 200px;
-    margin-bottom: 15px;
+.gallery__img-IMG2::before{
+    content: "Dale Q'Va";
+}
+
+.gallery__img-IMG3::before{
+    content: "La Konga";
+}
+
+.gallery__img-IMG4::before{
+    content: "Lucas Sugo";
+}
+
+.gallery__img-IMG5::before{
+    content: "The la Planta";
+}
+
+.gallery__img-IMG6::before{
+    content: "Ke Personajes";
+}
+
+.gallery__img-IMG7::before{
+    content: "Wisin & Yandel";
+}
+
+.gallery__img-IMG8::before{
+    content: "Daddy Yankee";
+}
+
+.gallery__img-IMG1{
+    grid-area: img1;
+}
+
+.gallery__img-IMG2{
+    grid-area: img2;
+}
+
+.gallery__img-IMG3{
+    grid-area: img3;
+}
+
+.gallery__img-IMG4{
+    grid-area: img4;
+}
+
+.gallery__img-IMG5{
+    grid-area: img5;
+}
+
+.gallery__img-IMG6{
+    grid-area: img6;
+}
+
+.gallery__img-IMG7{
+    grid-area: img7;
+}
+
+.gallery__img-IMG8{
+    grid-area: img8;
+}
+
+.gallery__img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .title{
+        font-size: 2rem;
+        padding:.8em 0 .4em;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "img1 img1"
+        "img1 img1"
+        "img2 img3"
+        "img4 img4"
+        "img4 img4"
+        "img5 img5"
+        "img5 img5"
+        "img6 img7"
+        "img8 img8"
+        "img8 img8";
+        ;
+    }
+
+    .gallery__picture::before{
+        font-size: 1rem;
+    }
+}
+
+.article{
+    background-color: #d49c19;
+    padding-bottom: 1px;
 }
 
 p {
@@ -180,7 +300,15 @@ p {
     padding-top: 6px;
     display: flex;
     justify-content: space-between;
-    
+}
+
+.titulo2 {
+    color: white;
+    padding-bottom: 5px;
+    padding-left: 300px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 3px;
 }
 
 .social-footer {
@@ -188,13 +316,8 @@ p {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 2px;
+    margin-top: 6px;
     margin-right: 3px;
-}
-
-.titulo2 {
-    color: white;
-    padding-bottom: 5px;
-    padding-left: 300px;
 }
 
 .whatsapp {
@@ -445,8 +568,4 @@ h1 {
     text-align: center;
     margin-top: 10px;
     outline: none;
-}
-
-@media only screen and (max-width:450px) {
-    
 }
