@@ -144,6 +144,10 @@ h1 {
     gap: 10px;
 }
 
+/* .icono{
+    font-size: 20px;
+} */
+
 .gallery__picture{
     position: relative;
     cursor: pointer;
@@ -294,51 +298,34 @@ p {
 
 /* footer */
 
-.footer {
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
     background-color: #000;
-    width: 100%;
-    padding-top: 6px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.titulo2 {
     color: white;
-    padding-bottom: 5px;
-    padding-left: 300px;
-    font-weight: bold;
-    font-size: 23px;
-    margin-top: 3px;
 }
 
-.social-footer {
-    width: 20%;
+footer .copy{
+    color: white;
+    padding-top: 5px;
+}
+
+.redes-sociales{
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2px;
-    margin-top: 6px;
-    margin-right: 3px;
+    justify-content: center;
 }
 
-.whatsapp {
-    margin-right: 3px;
-    width: 25px;
-    height: 25px;
+.redes-sociales a{
+    font-size: 26px;
+    padding: 0 20px;
+    text-decoration: none;
 }
 
-.facebook {
-    margin-right: 3px;
-    border-radius: 8px;
-    width: 25px;
-    height: 25px;
-}
-
-.instagram {
-    margin-right: 3px;
-    width: 25px;
-    height: 25px;
-}
-/* footer */
+/* footer
 
 
 /* reggaeton.html */
@@ -508,9 +495,27 @@ h1 {
     margin-left: 3px;
 }
 
+.formulario1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    width: 500px;
+}
+
+.form2{
+    width: 500px;
+}
+
+.h3padre{
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+
 .consulta-recuadro {
-    width: 700px;
-    height: 118px;
+    width: 100%;
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
@@ -519,11 +524,11 @@ h1 {
 }
 
 .enviar {
-    width: 500px;
+    width: 100%;
     font-weight: bold;
     font-size: 20px;
     margin-top: 10px;
-    margin-left: 190px;
+    /* margin-left: 190px; */
     border-radius: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -535,13 +540,12 @@ h1 {
 }
 
 .enviar2 {
-    
-    width: 500px;
+    width: 100%;
     font-weight: bold;
     font-size: 20px;
     margin-top: 10px;
     border-radius: 10px;
-    margin-left: 190px;
+    /* margin-left: 190px; */
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
@@ -561,11 +565,75 @@ h1 {
 }
 
 .correo-recuadro {
-    width: 500px;
+    width: 100%;
     height: 30px;
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
     margin-top: 10px;
     outline: none;
+}
+
+/* @media - responsive */
+
+/* @media only screen and (max-width:486px) {
+    .contenedor .copy{
+     font-size: 15px;
+    }
+} */
+
+@media only screen and (min-width: 590px) and (max-width: 960px){
+    .title{
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nombre-recuadro{
+        width: 300px;
+    }
+
+    .apellido-recuadro{
+        width: 300px;
+    }
+
+    .consulta-recuadro{
+        width: 300px;
+    }
+
+    .correo-recuadro{
+       width: 300px;
+       margin-bottom: 10px;
+    }
+
+    .enviar{
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .enviar2{
+        width: 300px;
+        
+    }
+}
+
+@media only screen and (min-width:472px) and (max-width:589px){
+    .title{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:590px) {
+
+    .encabezado1 .p1{
+        font-size: 20px;
+    }
+    
+    .encabezado1 .h3{
+        font-size: 20px;
+    }
+
+    .contenedor .copy{
+     font-size: 12.4px;
+    }
 }
