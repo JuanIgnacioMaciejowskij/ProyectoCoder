@@ -23,6 +23,13 @@ h1 {
     font-weight: bold;
 }
 
+.logo{
+    background-color: rgb(255, 255, 255, 0.1);
+    width: 105px;
+    height: 100px;
+    margin-bottom: 13px;
+}
+
 .nav-container {
     background-color: #000;
 }
@@ -574,13 +581,6 @@ h1 {
     outline: none;
 }
 
-/* @media - responsive */
-
-/* @media only screen and (max-width:486px) {
-    .contenedor .copy{
-     font-size: 15px;
-    }
-} */
 
 @media only screen and (min-width: 590px) and (max-width: 960px){
     .title{
@@ -613,7 +613,6 @@ h1 {
 
     .enviar2{
         width: 300px;
-        
     }
 }
 
@@ -635,5 +634,23 @@ h1 {
 
     .contenedor .copy{
      font-size: 12.4px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .button1, .button2, .button3 {
+        width: 300px;
+    }
+
+    .video1, .video2, .video3{
+        width: 300px;
+    }
+
+    .copy{
+        font-size: 13px;
+    }
+
+    .titulo-seccion{
+        font-size: 20px;
     }
 }

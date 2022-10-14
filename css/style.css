@@ -1,0 +1,35 @@
+/* SASS */
+.header {
+  background-color: orange;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  background-color: aqua;
+}
+
+/* estas compilaciones fueron hechas a modo de prueba, para comprobar que funcionaba todo bien */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #000;
+  font-size: 30px;
+}
+
+article {
+  background-color: red;
+}
+
+.main {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
