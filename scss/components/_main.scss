@@ -1,0 +1,194 @@
+@import '../base/_listas';
+@import '../base/_mixin';
+
+    /* comienzo - main.scss */
+    .main{
+        background-color: nth($colores, 5);
+        font-family: nth($font-family, 2);
+    }
+
+    .title{
+        font-weight: bold;
+        color: nth($colores, 2);
+        text-align: center;
+        font-size: nth($font-size, 4);
+        padding: .8em 0 .4em;
+        text-transform: uppercase;
+
+        @include media1{
+            @media (max-width: 768px) {
+                font-size: nth($font-size, 9);
+                padding:.8em 0 .4em;    
+        }
+    }
+
+        @include media1{
+            @media only screen and (min-width: 590px) and (max-width: 960px){
+                font-size: nth($font-size, 11);
+        }
+    }
+
+        @include media1{
+            @media only screen and (min-width:472px) and (max-width:589px){
+
+                font-size: nth($font-size, 12);
+        }
+    }
+    }
+
+    .gallery{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        @include display-grid;
+        gap: 10px;
+
+        @include media1{
+            @media (max-width: 768px) {
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "img1 img1"
+        "img1 img1"
+        "img2 img3"
+        "img4 img4"
+        "img4 img4"
+        "img5 img5"
+        "img5 img5"
+        "img6 img7"
+        "img8 img8"
+        "img8 img8";
+        ;
+        }
+    }
+    }
+
+    .gallery__picture{
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .gallery__picture{
+            &::before{
+                content: "Tus grupos favoritos";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: nth($colores, 7);
+                transform: scaleY(0);
+                transition: transform .4s;
+                color: nth($colores, 3);
+                @include d-flex;
+                font-size: nth($font-size, 5);
+
+                @include media1{
+                    @media (max-width: 768px) {
+                        font-size: nth($font-size, 10);
+                }
+            }
+    }
+    }
+    
+    .gallery__picture{
+        &:hover::before{
+            transform: scaleY(1);
+        }
+    }
+    
+    .gallery__img-IMG1{
+
+        &::before{
+            content: "Q'Lokura";
+    }
+
+    }
+    
+    .gallery__img-IMG2{
+
+        &::before{
+            content: "Dale Q'Va";
+    }
+    }
+    
+    .gallery__img-IMG3{
+
+        &::before{
+            content: "La Konga";
+    }
+    }
+    
+    .gallery__img-IMG4{
+
+        &::before{
+            content: "Lucas Sugo";
+    }
+    }
+    
+    .gallery__img-IMG5{
+
+        &::before{
+        content: "The la Planta";
+    }
+    }
+    
+    .gallery__img-IMG6{
+
+        &::before{
+        content: "Ke Personajes";
+    }
+    }
+
+    .gallery__img-IMG7{
+
+        &::before{
+        content: "Wisin & Yandel";
+    }
+    }
+    
+    .gallery__img-IMG8{
+
+        &::before{
+        content: "Daddy Yankee";
+    }
+    }
+
+    .gallery__img-IMG1{
+        grid-area: img1;
+    }
+    
+    .gallery__img-IMG2{
+        grid-area: img2;
+    }
+    
+    .gallery__img-IMG3{
+        grid-area: img3;
+    }
+    
+    .gallery__img-IMG4{
+        grid-area: img4;
+    }
+    
+    .gallery__img-IMG5{
+        grid-area: img5;
+    }
+    
+    .gallery__img-IMG6{
+        grid-area: img6;
+    }
+    
+    .gallery__img-IMG7{
+        grid-area: img7;
+    }
+    
+    .gallery__img-IMG8{
+        grid-area: img8;
+    }
+
+    .gallery__img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* final - main.scss */

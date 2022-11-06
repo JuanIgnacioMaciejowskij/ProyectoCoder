@@ -1,0 +1,157 @@
+@import '../base/_listas';
+@import '../base/_mixin';
+
+.formulario1{
+    width: 100%;
+    @include display-flex;
+}
+
+.form{
+    width: 500px;
+}
+
+.nombre {
+    color: nth($colores, 2);
+    font-weight: bold;
+    font-size: nth($font-size, 1);
+    font-family: nth($font-family, 1);
+    margin-left: 3px;
+}
+
+.nombre-recuadro {
+    width: 500px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    outline: none;
+
+    @include media1{
+        @media only screen and (max-width: 500px) {
+            width: 300px;
+    }
+}
+}
+
+.apellido {
+    color: nth($colores, 2);
+    font-weight: bold;
+    font-size: nth($font-size, 1);
+    font-family: nth($font-family, 1);
+    margin-left: 3px;
+}
+
+.apellido-recuadro {
+    width: 500px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    outline: none;
+
+    @include media1{
+        @media only screen and (max-width: 500px) {
+            width: 300px;
+    }
+}
+}
+
+.consulta {
+    color: nth($colores, 2);
+    font-weight: bold;
+    font-size: nth($font-size, 1);
+    font-family: nth($font-family, 1);
+    margin-left: 3px;
+}
+
+.consulta-recuadro {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    outline: none;
+
+    @include media1{
+        @media only screen and (max-width: 500px) {
+            width: 300px;
+    }
+}
+}
+
+.enviar2 {
+    width: 100%;
+    font-weight: bold;
+    font-size: nth($font-size, 1);
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    @include display-flex;
+    color: nth($colores, 2);
+    font-weight: bold;
+    padding: 1px;
+    border: 1px solid black;
+
+    @include media1{
+        @media only screen and (max-width: 500px) {
+            width: 300px;
+    }
+}
+}
+
+.form2{
+    width: 500px;
+}
+
+.h3padre{
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+
+.correo-electrónico {
+    color: nth($colores, 2);
+    font-weight: bold;
+    font-size: nth($font-size, 1);
+    font-family: nth($font-family, 1);
+    margin-left: 3px;
+}
+
+.correo-recuadro {
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    outline: none;
+
+    @include media1{
+        @media only screen and (max-width: 500px) {
+            width: 300px;
+            margin-bottom: 10px;
+    }
+}
+}
+
+.enviar {
+    width: 100%;
+    font-weight: bold;
+    font-size: nth($font-size, 1);
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    @include display-flex;
+    color: nth($colores, 2);
+    font-weight: bold;
+    padding: 1px;
+    border: 1px solid black;
+
+    @include media1{
+        @media only screen and (max-width: 500px) {
+            width: 300px;
+            margin-bottom: 10px;
+    }
+}
+}

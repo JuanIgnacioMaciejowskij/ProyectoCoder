@@ -1,35 +1,641 @@
+@charset "UTF-8";
 /* SASS */
-.header {
-  background-color: orange;
-  width: 100%;
+/* comienzo - header.scss */
+.section-titular {
+  background-color: #b0aea7;
+  text-align: center;
+  padding-bottom: 1px;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1px;
+  font-size: 40px;
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: bold;
+}
+
+.logo {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 105px;
+  height: 100px;
+  margin-bottom: 15px;
 }
 
 .nav-container {
+  background-color: #000;
+}
+
+.menú-nav {
   display: flex;
   justify-content: center;
 }
 
-nav {
-  background-color: aqua;
+.menú-bar a {
+  margin-right: 50px;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: "Noto Sans Display", sans-serif;
 }
 
-/* estas compilaciones fueron hechas a modo de prueba, para comprobar que funcionaba todo bien */
+.menú-bar .enlace {
+  display: block;
+}
+
+.menú-bar .enlace:hover {
+  background-color: red;
+}
+
+/* final - header.scss */
+/* reseteo */
 * {
   margin: 0;
   padding: 0;
 }
 
-footer {
+/* comienzo - footer.scss */
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
   background-color: #000;
-  font-size: 30px;
+  color: white;
 }
 
-article {
-  background-color: red;
+.redes-sociales {
+  display: flex;
+  justify-content: center;
 }
 
+.redes-sociales a {
+  font-size: 26px;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.copy {
+  color: white;
+  padding-top: 5px;
+}
+@media only screen and (min-width: 360px) and (max-width: 590px) {
+  .copy {
+    font-size: 12.4px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .copy {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 358px) {
+  .copy {
+    font-size: 12.4px;
+  }
+}
+@media only screen and (max-width: 328px) {
+  .copy {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .titulo-seccion {
+    font-size: 20px;
+  }
+}
+
+/* final - footer.scss */
+/* comienzo - article.scss */
+.article {
+  background-color: #d49c19;
+  padding-bottom: 1px;
+}
+
+p {
+  margin-left: 5px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.lista-trabajos {
+  margin-left: 22px;
+  font-size: 16px;
+  list-style-type: inherit;
+  font-family: Arial;
+  color: #000;
+}
+
+.rojo {
+  color: red;
+}
+
+/* final - article.scss */
+/* comienzo - main.scss */
 .main {
+  background-color: #d49c19;
+  font-family: "Poppins";
+}
+
+.title {
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  font-size: 2.8rem;
+  padding: 0.8em 0 0.4em;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    padding: 0.8em 0 0.4em;
+  }
+}
+@media only screen and (min-width: 590px) and (max-width: 960px) {
+  .title {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 472px) and (max-width: 589px) {
+  .title {
+    font-size: 25px;
+  }
+}
+
+.gallery {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 160px;
+  grid-template-areas: "img1 img1 img2 img3" "img1 img1 img4 img4" "img5 img5 img6 img7" "img5 img5 img8 img8";
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img1 img1" "img1 img1" "img2 img3" "img4 img4" "img4 img4" "img5 img5" "img5 img5" "img6 img7" "img8 img8" "img8 img8";
+  }
+}
+
+.gallery__picture {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery__picture::before {
+  content: "Tus grupos favoritos";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(91, 64, 243, 0.6509803922);
+  transform: scaleY(0);
+  transition: transform 0.4s;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .gallery__picture::before {
+    font-size: 1rem;
+  }
+}
+
+.gallery__picture:hover::before {
+  transform: scaleY(1);
+}
+
+.gallery__img-IMG1::before {
+  content: "Q'Lokura";
+}
+
+.gallery__img-IMG2::before {
+  content: "Dale Q'Va";
+}
+
+.gallery__img-IMG3::before {
+  content: "La Konga";
+}
+
+.gallery__img-IMG4::before {
+  content: "Lucas Sugo";
+}
+
+.gallery__img-IMG5::before {
+  content: "The la Planta";
+}
+
+.gallery__img-IMG6::before {
+  content: "Ke Personajes";
+}
+
+.gallery__img-IMG7::before {
+  content: "Wisin & Yandel";
+}
+
+.gallery__img-IMG8::before {
+  content: "Daddy Yankee";
+}
+
+.gallery__img-IMG1 {
+  grid-area: img1;
+}
+
+.gallery__img-IMG2 {
+  grid-area: img2;
+}
+
+.gallery__img-IMG3 {
+  grid-area: img3;
+}
+
+.gallery__img-IMG4 {
+  grid-area: img4;
+}
+
+.gallery__img-IMG5 {
+  grid-area: img5;
+}
+
+.gallery__img-IMG6 {
+  grid-area: img6;
+}
+
+.gallery__img-IMG7 {
+  grid-area: img7;
+}
+
+.gallery__img-IMG8 {
+  grid-area: img8;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+}
+
+/* final - main.scss */
+/* comienzo - index.scss */
+.section-encabezado {
+  background-color: #b0aea7;
+}
+
+.encabezado1 {
+  padding: 10px;
+  text-align: center;
   font-size: 20px;
+  font-family: Arial;
+  color: #000;
+}
+
+.p1 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+@media only screen and (min-width: 360px) and (max-width: 590px) {
+  .p1 {
+    font-size: 20px;
+  }
+}
+
+.h3 {
+  color: #000;
+  font-weight: bold;
+}
+@media only screen and (min-width: 360px) and (max-width: 590px) {
+  .h3 {
+    font-size: 20px;
+  }
+}
+
+/* final - index.scss */
+/* comienzo - reggaeton.scss */
+.p1bis {
+  margin-bottom: 2px;
+}
+
+h3 {
+  color: #000;
+  font-weight: bold;
+}
+
+.contenido-cuerpo {
+  background-color: #d49c19;
+  padding-bottom: 1px;
+}
+
+.contenido-cuerpo h3 {
+  margin-left: 3px;
+  padding-top: 2px;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+p {
+  font-family: Cambria;
+}
+
+.video1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 420px) {
+  .video1 {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 280px) {
+  .video1 {
+    width: 280px;
+  }
+}
+
+.primer-video {
+  display: flex;
+  justify-content: center;
+}
+
+.button1-container {
+  display: flex;
+  justify-content: center;
+}
+.button1-container:hover {
+  transform: scale(1.2);
+}
+
+.button1 {
+  width: 550px;
+  color: #000;
+  border: 1.5px solid blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 420px) {
+  .button1 {
+    width: 300px;
+  }
+}
+
+.descarga {
+  text-decoration: none;
+}
+
+.segundo-video {
+  display: flex;
+  justify-content: center;
+}
+
+.video2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 420px) {
+  .video2 {
+    width: 300px;
+  }
+}
+
+.button2-container {
+  display: flex;
+  justify-content: center;
+}
+.button2-container:hover {
+  transform: scale(1.2);
+}
+
+.button2 {
+  width: 550px;
+  color: #000;
+  border: 1.5px solid blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 420px) {
+  .button2 {
+    width: 300px;
+  }
+}
+
+.descarga2 {
+  text-decoration: none;
+}
+
+.tercer-video {
+  display: flex;
+  justify-content: center;
+}
+
+.video3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 420px) {
+  .video3 {
+    width: 300px;
+  }
+}
+
+.button3-container {
+  display: flex;
+  justify-content: center;
+}
+.button3-container:hover {
+  transform: scale(1.2);
+}
+
+.button3 {
+  width: 550px;
+  color: #000;
+  border: 1.5px solid blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 420px) {
+  .button3 {
+    width: 300px;
+  }
+}
+
+.descarga3 {
+  text-decoration: none;
+}
+
+/* final reggaeton.scss */
+.formulario1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 500px;
+}
+
+.nombre {
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial;
+  margin-left: 3px;
+}
+
+.nombre-recuadro {
+  width: 500px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  outline: none;
+}
+@media only screen and (max-width: 500px) {
+  .nombre-recuadro {
+    width: 300px;
+  }
+}
+
+.apellido {
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial;
+  margin-left: 3px;
+}
+
+.apellido-recuadro {
+  width: 500px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  outline: none;
+}
+@media only screen and (max-width: 500px) {
+  .apellido-recuadro {
+    width: 300px;
+  }
+}
+
+.consulta {
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial;
+  margin-left: 3px;
+}
+
+.consulta-recuadro {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  outline: none;
+}
+@media only screen and (max-width: 500px) {
+  .consulta-recuadro {
+    width: 300px;
+  }
+}
+
+.enviar2 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+  padding: 1px;
+  border: 1px solid black;
+}
+@media only screen and (max-width: 500px) {
+  .enviar2 {
+    width: 300px;
+  }
+}
+
+.form2 {
+  width: 500px;
+}
+
+.h3padre {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.correo-electrónico {
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial;
+  margin-left: 3px;
+}
+
+.correo-recuadro {
+  width: 100%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  outline: none;
+}
+@media only screen and (max-width: 500px) {
+  .correo-recuadro {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+}
+
+.enviar {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+  padding: 1px;
+  border: 1px solid black;
+}
+@media only screen and (max-width: 500px) {
+  .enviar {
+    width: 300px;
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

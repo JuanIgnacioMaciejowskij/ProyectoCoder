@@ -1,16 +1,56 @@
-.header{
-    background-color: orange;
-    width: 100%;
+@import '../base/_mixin';
+@import '../base/_listas';
+@import '../base/_variables';
+
+/* comienzo - header.scss */
+
+.section-titular {
+        background-color: nth($colores, 4);
+        text-align: center;
+        padding-bottom: 1px;
+        font-family: $font-family;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1px;
+        font-size: nth($font-size, 3);
+        font-family: $font-family;
+        font-weight: bold;
+    }
+
+    .logo {
+        background-color: nth($colores, 1);
+        width: 105px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .nav-container{
+        background-color: nth($colores, 2);
+    }
+
+    .menú-nav{
+        @include display-flex;
+    }
+
+    .menú-bar a {
+    margin-right: 50px;
+    color: nth($colores, 3);
+    border-radius: 5px;
+    font-size: nth($font-size, 1);
+    font-family: $font-family;
 }
 
-.nav-container{
-    display: flex;
-    justify-content: center;
+.menú-bar .enlace{
+    display: block;
 }
 
-nav{
-    background-color: aqua;
+.menú-bar .enlace{
+
+    &:hover{
+        background-color: nth($colores, 6);
+    }
 }
 
-
-/* estas compilaciones fueron hechas a modo de prueba, para comprobar que funcionaba todo bien */
+/* final - header.scss */

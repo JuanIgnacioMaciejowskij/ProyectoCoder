@@ -1,4 +1,66 @@
-footer{
-    background-color: #000;
-    font-size: 30px;
+@import '../base/_listas';
+@import '../base/_mixin';
+
+/* comienzo - footer.scss */
+
+.contenedor{
+    @include d-flex;
 }
+
+.footer{
+    background-color: nth($colores, 2);
+    color: nth($colores, 3);
+}
+
+.redes-sociales{
+    @include display-flex;
+}
+
+.redes-sociales a{
+    font-size: nth($font-size, 8);
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.copy{
+    color: nth($colores, 3);
+    padding-top: 5px;
+
+    @include media1{
+        @media only screen and (min-width:360px) and (max-width:590px) {
+
+            font-size: nth($font-size, 13);
+    }
+}
+    
+    @include media1{
+        @media only screen and (max-width: 420px) {
+            font-size: nth($font-size, 14);
+    }
+}
+
+    @include media1{
+
+        @media only screen and (max-width: 358px) {
+            font-size: 12.4px;
+}
+}
+
+@include media1{
+
+    @media only screen and (max-width: 328px) {
+        text-align: center;
+}
+}
+}
+
+.titulo-seccion{
+    @include media1{
+
+        @media only screen and (max-width: 420px) {
+            font-size: nth($font-size, 1);
+    }
+    }
+}
+
+/* final - footer.scss */

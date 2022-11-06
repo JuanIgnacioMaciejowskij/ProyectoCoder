@@ -1,7 +1,32 @@
-article{
-    background-color: red;
+@import '../base/_listas';
+@import '../base/_mixin';
+
+/* comienzo - article.scss */
+
+.article{
+    background-color: nth($colores, 5);
+    padding-bottom: 1px;
 }
 
-.main{
-    font-size: 20px;
+p {
+    margin-left: 5px;
+    font-size: nth($font-size, 6);
+    font-family: nth($font-family, 4);
+    font-weight: bold;
+    color: nth($colores, 2);
+    margin-bottom: 5px;
 }
+
+.lista-trabajos{
+    margin-left: 22px;
+    font-size: nth($font-size, 7);
+    list-style-type: inherit;
+    font-family: nth($font-family, 1);
+    color: nth($colores, 2);
+}
+
+.rojo {
+    color: nth($colores, 6);
+}
+
+/* final - article.scss */

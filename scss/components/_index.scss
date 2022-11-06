@@ -1,0 +1,43 @@
+@import '../base/_variables';
+@import '../base/_listas';
+
+/* comienzo - index.scss */
+
+    .section-encabezado{
+        background-color: nth($colores, 4);
+    }
+
+.encabezado1 {
+    padding: nth($padding, 1);
+    text-align: center;
+    font-size: nth($font-size, 1);
+    font-family: nth($font-family, 1);
+    color: nth($colores, 2);
+}
+
+.p1{
+    font-size: nth($font-size, 2);
+    margin-bottom: 2px;
+    font-weight: bold;
+
+    @include media1{
+        @media only screen and (min-width:360px) and (max-width:590px) {
+
+            font-size: nth($font-size, 1);
+    }
+}
+}
+
+.h3{
+    color: nth($colores, 2);
+    font-weight: bold;
+
+    @include media1{
+        @media only screen and (min-width:360px) and (max-width:590px) {
+
+            font-size: nth($font-size, 1);
+    }
+}
+}
+
+/* final - index.scss */

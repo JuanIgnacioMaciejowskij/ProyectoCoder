@@ -1,0 +1,170 @@
+@import '../base/_listas';
+
+/* comienzo - reggaeton.scss */
+
+.p1bis{
+    margin-bottom: 2px;
+}
+
+h3{
+    color:nth($colores, 2);
+    font-weight: bold;
+}
+
+.contenido-cuerpo {
+    background-color: nth($colores, 5);
+    padding-bottom: 1px;
+}
+
+.contenido-cuerpo h3{
+    margin-left: 3px;
+    padding-top: 2px;
+    font-family: nth($font-family, 1);
+    font-size: nth($font-size, 1);
+}
+
+p{
+    font-family: nth($font-family, 5);
+}
+
+.video1{
+    @include display-flex;
+    margin-top: 10px;
+
+    @include media1{
+
+        @media only screen and (max-width: 420px) {
+            width: 300px;
+    }
+}
+    @include media1{
+        @media only screen and (min-width: 280px) {
+            width: 280px;
+    }
+}
+}
+
+.primer-video{
+    @include display-flex;
+}
+
+.button1-container{
+    @include display-flex;
+
+    &:hover{
+        transform:scale(1.2);
+    }
+}
+
+.button1 {
+    width: 550px;
+    color: nth($colores, 2);
+    border: 1.5px solid blue;
+    border-radius: 5px;
+    @include display-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include media1{
+
+        @media only screen and (max-width: 420px) {
+            width: 300px;
+    }
+}
+}
+
+.descarga {
+    text-decoration: none;
+}
+
+.segundo-video{
+    @include display-flex;
+}
+
+.video2 {
+    @include display-flex;
+    margin-top: 10px;
+
+    @include media1{
+
+        @media only screen and (max-width: 420px) {
+            width: 300px;
+    }
+}
+}
+
+.button2-container{
+    @include display-flex;
+
+    &:hover{
+        transform:scale(1.2);
+    }
+}
+
+.button2 {
+    width: 550px;
+    color: nth($colores, 2);
+    border: 1.5px solid blue;
+    border-radius: 5px;
+    @include display-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include media1{
+
+        @media only screen and (max-width: 420px) {
+            width: 300px;
+    }
+}
+}
+
+.descarga2 {
+    text-decoration: none;
+}
+
+.tercer-video{
+    @include display-flex;
+}
+
+.video3{
+    @include display-flex;
+    margin-top: 10px;
+
+    @include media1{
+
+        @media only screen and (max-width: 420px) {
+            width: 300px;
+    }
+}
+}
+
+.button3-container {
+    @include display-flex;
+
+    &:hover{
+        transform:scale(1.2);
+    }
+}
+
+.button3 {
+    width: 550px;
+    color: nth($colores, 2);
+    border: 1.5px solid blue;
+    border-radius: 5px;
+    @include display-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include media1{
+
+        @media only screen and (max-width: 420px) {
+            width: 300px;
+    }
+}
+}
+
+.descarga3 {
+    text-decoration: none;
+}
+
+/* final reggaeton.scss */

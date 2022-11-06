@@ -1,7 +1,15 @@
 /* SASS */
 
+@import 'base/_variables';
+@import 'base/mapas';
+@import 'base/extend';
+@import 'base/_listas';
 @import 'components/header';
 @import 'base/estilosGenerales';
 @import 'components/footer';
 @import 'components/article';
 @import 'components/main';
+@import 'components/index';
+@import 'base/mixin';
+@import 'components/reggaeton';
+@import 'components/contacto';
